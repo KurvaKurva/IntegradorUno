@@ -1,10 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
+using System.Threading.Tasks;
 
-namespace InterfacesDeMapeo
+namespace interfacesMapeo
 {
-    public class iTramoMapper
+    public interface iTramoMapper
     {
     }
 }
