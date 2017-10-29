@@ -82,8 +82,8 @@ namespace Persistencia
             return dr;
         }
 
-        private static string _servidor = "DESKTOP-IO03MF9\\SQLEXPRESS";
-        private static string _baseDatos = "obligatorioP3";
+        private static string _servidor = "DESKTOP-6BB7657";
+        private static string _baseDatos = "integradorUno";
         private static string dataConexion = "Data Source=" + _servidor + ";Initial Catalog=" + _baseDatos + ";" + "Integrated Security=SSPI;";
         public static SqlConnection ObtenerConexion()
         {

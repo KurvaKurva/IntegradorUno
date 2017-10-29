@@ -1,0 +1,7 @@
+C:\Users\Carlos\Source\Repos\IntegradorUno\integradorUno\interfacesMapeo\bin\Debug\interfacesMapeo.dll
+C:\Users\Carlos\Source\Repos\IntegradorUno\integradorUno\interfacesMapeo\bin\Debug\interfacesMapeo.pdb
+C:\Users\Carlos\Source\Repos\IntegradorUno\integradorUno\interfacesMapeo\bin\Debug\Domain.dll
+C:\Users\Carlos\Source\Repos\IntegradorUno\integradorUno\interfacesMapeo\bin\Debug\Domain.pdb
+C:\Users\Carlos\Source\Repos\IntegradorUno\integradorUno\interfacesMapeo\obj\Debug\interfacesMapeo.csprojResolveAssemblyReference.cache
+C:\Users\Carlos\Source\Repos\IntegradorUno\integradorUno\interfacesMapeo\obj\Debug\interfacesMapeo.dll
+C:\Users\Carlos\Source\Repos\IntegradorUno\integradorUno\interfacesMapeo\obj\Debug\interfacesMapeo.pdb

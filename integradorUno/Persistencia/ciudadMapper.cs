@@ -19,7 +19,7 @@ namespace Persistencia
             return ciudad;
         }
 
-        public void guardarCiudad(Ciudad objC)
+        /*public void guardarCiudad(Ciudad objC)
         {
             var parametros = new List<SqlParameter>();
             var id = new SqlParameter();
@@ -37,6 +37,6 @@ namespace Persistencia
                 var filasAfectadas = EjecutaNonQuery("INSERT INTO ciudad (nombre) VALUES (@nombre);", CommandType.Text, parametros, con, trn);
 
             }
-        }
+        }*/
     }
 }

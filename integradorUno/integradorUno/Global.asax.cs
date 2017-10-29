@@ -4,6 +4,8 @@ using System.Linq;
 using System.Web;
 using System.Web.Security;
 using System.Web.SessionState;
+using System.Web.UI;
+using Persistencia;
 
 namespace integradorUno
 {
@@ -11,6 +13,13 @@ namespace integradorUno
     {
         protected void Application_Start(object sender, EventArgs e)
         {
+            Servicios.gestoraTramo.mapper = new tramoMapper();
+            ScriptManager.ScriptResourceMapping.AddDefinition("jquery",
+               new ScriptResourceDefinition
+               {
+                   Path = "/scripts/jquery-1.12.4.js"
+               }
+           );
         }
     }
 }

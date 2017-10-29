@@ -1,0 +1,9 @@
+C:\Users\Carlos\Source\Repos\IntegradorUno\integradorUno\Servicios\bin\Debug\Servicios.dll
+C:\Users\Carlos\Source\Repos\IntegradorUno\integradorUno\Servicios\bin\Debug\Servicios.pdb
+C:\Users\Carlos\Source\Repos\IntegradorUno\integradorUno\Servicios\bin\Debug\Domain.dll
+C:\Users\Carlos\Source\Repos\IntegradorUno\integradorUno\Servicios\bin\Debug\interfacesMapeo.dll
+C:\Users\Carlos\Source\Repos\IntegradorUno\integradorUno\Servicios\bin\Debug\Domain.pdb
+C:\Users\Carlos\Source\Repos\IntegradorUno\integradorUno\Servicios\bin\Debug\interfacesMapeo.pdb
+C:\Users\Carlos\Source\Repos\IntegradorUno\integradorUno\Servicios\obj\Debug\Servicios.csprojResolveAssemblyReference.cache
+C:\Users\Carlos\Source\Repos\IntegradorUno\integradorUno\Servicios\obj\Debug\Servicios.dll
+C:\Users\Carlos\Source\Repos\IntegradorUno\integradorUno\Servicios\obj\Debug\Servicios.pdb

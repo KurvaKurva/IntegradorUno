@@ -1,0 +1,9 @@
+C:\Users\Carlos\Source\Repos\IntegradorUno\integradorUno\Persistencia\obj\Debug\Persistencia.csprojResolveAssemblyReference.cache
+C:\Users\Carlos\Source\Repos\IntegradorUno\integradorUno\Persistencia\bin\Debug\Persistencia.dll
+C:\Users\Carlos\Source\Repos\IntegradorUno\integradorUno\Persistencia\bin\Debug\Persistencia.pdb
+C:\Users\Carlos\Source\Repos\IntegradorUno\integradorUno\Persistencia\bin\Debug\Domain.dll
+C:\Users\Carlos\Source\Repos\IntegradorUno\integradorUno\Persistencia\bin\Debug\interfacesMapeo.dll
+C:\Users\Carlos\Source\Repos\IntegradorUno\integradorUno\Persistencia\bin\Debug\Domain.pdb
+C:\Users\Carlos\Source\Repos\IntegradorUno\integradorUno\Persistencia\bin\Debug\interfacesMapeo.pdb
+C:\Users\Carlos\Source\Repos\IntegradorUno\integradorUno\Persistencia\obj\Debug\Persistencia.dll
+C:\Users\Carlos\Source\Repos\IntegradorUno\integradorUno\Persistencia\obj\Debug\Persistencia.pdb
