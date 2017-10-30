@@ -19,6 +19,42 @@ namespace Persistencia
             return ciudad;
         }
 
+        #region Obtener
+        public List<Ciudad> obtenerTodos()
+        {
+            List<Ciudad> listaCiudades = new List<Ciudad>();
+            var param = new List<SqlParameter>();
+            var con = AbrirConexion();
+            var reader = select("SELECT * FROM ciudad", CommandType.Text, param, con, null);
+            while(reader.Read())
+            {
+                listaCiudades.Add(cargarCiudades(reader));
+            }
+            CerrarConexion(con);
+            return listaCiudades;
+        }
+
+        public Ciudad obtenerPorId(int xId)
+        {
+            var param = new List<SqlParameter>();
+            var id = new SqlParameter();
+            id.ParameterName = "@id";
+            id.Value = xId;
+            param.Add(id);
+            var con = AbrirConexion();
+            var reader = select("SELECT * FROM ciudad  WHERE id = @id", CommandType.Text, param, con, null);
+            Ciudad c = null;
+            {
+                if(reader.Read())
+                {
+                    c = cargarCiudades(reader);
+                }
+                CerrarConexion(con);
+                return c;
+            }
+        }
+        
+        #endregion
         /*public void guardarCiudad(Ciudad objC)
         {
             var parametros = new List<SqlParameter>();
