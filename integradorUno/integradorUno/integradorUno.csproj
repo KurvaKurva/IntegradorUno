@@ -65,6 +65,7 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="omnibusABM.aspx" />
     <Content Include="packages.config" />
     <Content Include="principal.Master" />
     <None Include="Web.Debug.config">
@@ -82,6 +83,13 @@
   <ItemGroup>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="omnibusABM.aspx.cs">
+      <DependentUpon>omnibusABM.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="omnibusABM.aspx.designer.cs">
+      <DependentUpon>omnibusABM.aspx</DependentUpon>
     </Compile>
     <Compile Include="principal.Master.cs">
       <DependentUpon>principal.Master</DependentUpon>

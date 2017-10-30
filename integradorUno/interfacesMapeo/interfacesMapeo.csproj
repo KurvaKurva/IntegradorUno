@@ -41,6 +41,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="iCiudad.cs" />
+    <Compile Include="iOmnibus.cs" />
     <Compile Include="iTramo.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

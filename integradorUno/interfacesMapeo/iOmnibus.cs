@@ -7,10 +7,9 @@ using Dominio;
 
 namespace interfacesMapeo
 {
-    public interface iCiudad
+   public interface iOmnibus
     {
-        List<Ciudad> obtenerTodos();
-        Ciudad obtenerPorId(int xId);
-        //void guardar(Ciudad objC);
+        List<Omnibus> obtenerTodos();
+        void guardar(Omnibus objO, Ciudad objC);
     }
 }

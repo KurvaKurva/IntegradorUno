@@ -14,6 +14,8 @@ namespace integradorUno
         protected void Application_Start(object sender, EventArgs e)
         {
             Servicios.gestoraTramo.mapper = new tramoMapper();
+            Servicios.gestoraOminubs.mapper = new omnibusMapper();
+            Servicios.gestoraCiudad.mapper = new ciudadMapper();
             ScriptManager.ScriptResourceMapping.AddDefinition("jquery",
                new ScriptResourceDefinition
                {
