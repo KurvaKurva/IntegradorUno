@@ -34,6 +34,26 @@ namespace Persistencia
             CerrarConexion(con);
             return listaTramo;
         }
+
+        public Tramo obtenerPorId(int xId)
+        {
+            var param = new List<SqlParameter>();
+            var id = new SqlParameter();
+            id.ParameterName = "@id";
+            id.Value = xId;
+            param.Add(id);
+            var con = AbrirConexion();
+            var reader = select("SELECT * FROM tramo WHERE id = @id", CommandType.Text, param, con, null);
+            Tramo t = null;
+            {
+                if (reader.Read())
+                {
+                    t = cargarTramo(reader);
+                }
+                CerrarConexion(con);
+                return t;
+            }
+        }
         #endregion
 
 
@@ -53,7 +73,7 @@ namespace Persistencia
             var tran = con.BeginTransaction();
             try
             {
-                var resultado = EjecutaNonQuery("INSERT INTO tramo cantKilometros, precioBase VALUES (@cantKilometros, @precioBase)", CommandType.Text, param, con, tran);
+                var resultado = EjecutaNonQuery("INSERT INTO tramo (cantKilometros, precioBase) VALUES (@cantKilometros, @precioBase)", CommandType.Text, param, con, tran);
                 tran.Commit();
             }
             catch(Exception ex)

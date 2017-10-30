@@ -10,6 +10,7 @@ namespace interfacesMapeo
     public interface iTramo
     {
         List<Tramo> obtenerTodos();
+        Tramo obtenerPorId(int xId);
         void guardar(Tramo objT);
         int eliminar(Tramo objT);
         int modificar(Tramo objT);

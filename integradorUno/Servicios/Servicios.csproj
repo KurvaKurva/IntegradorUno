@@ -46,6 +46,7 @@
     <Compile Include="gestoraPasaje.cs" />
     <Compile Include="gestoraTramo.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Resultado.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Domain\Domain.csproj">
