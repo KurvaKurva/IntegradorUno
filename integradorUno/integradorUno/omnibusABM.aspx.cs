@@ -66,5 +66,63 @@ namespace integradorUno
                 }
             }
         }
+
+        protected void btnModificar_Click(object sender, EventArgs e)
+        {
+            if(Page.IsValid)
+            {
+                var obt = new gestoraOminubs().obtenerPorMatricula(Convert.ToString(lstOmnibus.SelectedValue));
+                {
+                    obt.capacidad = Convert.ToInt32(txtModCapacidad.Text);
+                    obt.ciudadActual = new Ciudad() { id = Convert.ToInt32(ddlCiudad.SelectedValue) };
+                    obt.matricula = Convert.ToString(txtModMatricula.Text);
+                    obt.isLleno = false;
+                };
+                var res = new gestoraOminubs().modificarOmnibus(obt);
+                {
+                    if(res.estaCorrecto)
+                    {
+                        cargarOmnibus();
+                    }
+                    else
+                    {
+                        foreach(var err in res.errores)
+                        {
+                            Page.Validators.Add(new CustomValidator()
+                            {
+                                ValidationGroup = "modificar",
+                                IsValid = false,
+                                ErrorMessage = err,
+                            });
+                        }
+                    }
+                }
+            }
+        }
+
+        protected void btnEliminar_Click(object sender, EventArgs e)
+        {
+            if(Page.IsValid)
+            {
+                var obt = new gestoraOminubs().obtenerPorMatricula(Convert.ToString(lstOmnibus.SelectedValue));
+                var res = new gestoraOminubs().eliminar(obt);
+                if(res.estaCorrecto)
+                {
+                    cargarOmnibus();
+                }
+                else
+                {
+                    foreach(var err in res.errores)
+                    {
+                        Page.Validators.Add(new CustomValidator()
+                        {
+                            ValidationGroup = "Eliminar",
+                            IsValid = false,
+                            ErrorMessage = err,
+                        });
+                    }
+                }
+            }
+        }
     }
 }

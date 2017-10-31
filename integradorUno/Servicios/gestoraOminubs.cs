@@ -24,9 +24,41 @@ namespace Servicios
             return Resultado;
         }
 
+        public Resultado modificarOmnibus(Omnibus objO)
+        {
+            var res = new Resultado();
+            if(objO.matricula.Equals(0))
+            {
+                res.errores.Add("no puede usar esa matricula");
+            }
+            else
+            {
+                mapper.modificar(objO);
+            }
+            return res;
+        }
         public List<Omnibus> obtenerTodos()
         {
             return mapper.obtenerTodos();
+        }
+        
+        public Omnibus obtenerPorMatricula (string xMatricula)
+        {
+            return mapper.obtenerPorMatricula(xMatricula);
+        }
+
+        public Resultado eliminar (Omnibus objO)
+        {
+            var res = new Resultado();
+            if(objO.matricula == "caca")
+            {
+                res.errores.Add("No puede ser caca");
+            }
+            else
+            {
+                mapper.eliminar(objO);
+            }
+            return res;
         }
     }
 }

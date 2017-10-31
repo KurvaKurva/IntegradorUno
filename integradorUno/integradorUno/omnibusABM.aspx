@@ -15,5 +15,19 @@
     <br />
     <asp:Button ID="btnAceptar" runat="server" OnClick="btnAceptar_Click" Text="Aceptar" />
     <br />
+    MODIFICAR<br />
+    <asp:Label ID="lblCapacidad" runat="server" Text="Capacidad"></asp:Label>
+    <asp:TextBox ID="txtModCapacidad" runat="server"></asp:TextBox>
+    <br />
+    <asp:Label ID="lblMatricula" runat="server" Text="Matricula"></asp:Label>
+    <asp:TextBox ID="txtModMatricula" runat="server"></asp:TextBox>
+    <br />
+    <asp:Button ID="btnModificar" runat="server" Text="Modificar" OnClick="btnModificar_Click" />
+    <br />
+    <br />
+    ELIMINAR<br />
+    <asp:Button ID="btnEliminar" runat="server" Text="Eliminar" OnClick="btnEliminar_Click" />
+    <br />
+    <br />
 
 </asp:Content>
