@@ -6,8 +6,10 @@ namespace Dominio
 {
     public class Horario
     {
-        public int id;
-        public DateTime horarioSalida;
-        public DateTime horarioLlegada;
+        public int id { get; set; }
+        public DateTime horarioSalida { get; set; }
+        public DateTime horarioLlegada { get; set; }
+        public Tramo objT { get; set; }
+        public Omnibus objO { get; set; }
     }
 }

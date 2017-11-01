@@ -13,10 +13,28 @@ namespace integradorUno
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            if(!IsPostBack)
+            if (!IsPostBack)
             {
                 cargarTramos();
+                cargarCiudadDestino();
+                cargarCiudadOrigen();
             }
+        }
+
+        private void cargarCiudadDestino()
+        {
+            ddlCiudadDestino.DataSource = new gestoraCiudad().obtenerTodas();
+            ddlCiudadDestino.DataTextField = "nombre";
+            ddlCiudadDestino.DataValueField = "id";
+            ddlCiudadDestino.DataBind();
+        }
+
+        private void cargarCiudadOrigen()
+        {
+            ddlCiudadOrigen.DataSource = new gestoraCiudad().obtenerTodas();
+            ddlCiudadOrigen.DataTextField = "nombre";
+            ddlCiudadOrigen.DataValueField = "id";
+            ddlCiudadOrigen.DataBind();
         }
         private void cargarTramos()
         {
@@ -32,8 +50,10 @@ namespace integradorUno
             {
                 cantKilometros = Convert.ToInt32(txtCantKilometros.Text),
                 precioBase = Convert.ToInt32(txtPrecioBase.Text),
+                origen  = new Ciudad() { id = Convert.ToInt32(ddlCiudadOrigen.SelectedValue) },
+                destino = new Ciudad() { id = Convert.ToInt32(ddlCiudadDestino.SelectedValue) },
             };
-            var res = new gestoraTramo().agregarTramo(objT);
+            var res = new gestoraTramo().agregarTramo(objT, objT.origen, objT.destino);
             if(res.estaCorrecto)
             {
                 cargarTramos();

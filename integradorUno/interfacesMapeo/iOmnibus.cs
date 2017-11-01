@@ -11,6 +11,7 @@ namespace interfacesMapeo
     {
         List<Omnibus> obtenerTodos();
         Omnibus obtenerPorMatricula(string xMatricula);
+        Omnibus obtenerPorId(int xId);
         void guardar(Omnibus objO, Ciudad objC);
 
         int modificar(Omnibus objO);

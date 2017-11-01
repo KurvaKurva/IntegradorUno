@@ -6,6 +6,7 @@ namespace Dominio
 {
     public class Omnibus
     {
+        public int id { get; set; }
         public string matricula { get; set; }
         public int capacidad { get; set; }
         public Ciudad ciudadActual { get; set; }

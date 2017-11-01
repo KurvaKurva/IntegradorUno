@@ -47,6 +47,10 @@ namespace Servicios
             return mapper.obtenerPorMatricula(xMatricula);
         }
 
+        public Omnibus obtenerPorId(int xId)
+        {
+            return mapper.obtenerPorId(xId);
+        }
         public Resultado eliminar (Omnibus objO)
         {
             var res = new Resultado();

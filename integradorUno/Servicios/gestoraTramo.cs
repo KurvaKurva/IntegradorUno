@@ -9,7 +9,7 @@ namespace Servicios
     public class gestoraTramo
     {
         public static iTramo mapper { get; set; }
-        public Resultado agregarTramo(Tramo objT)
+        public Resultado agregarTramo(Tramo objT, Ciudad origen, Ciudad destino)
         {
             var resultado = new Resultado();
             if (objT.cantKilometros.Equals(0))
@@ -18,7 +18,7 @@ namespace Servicios
             }
             else
             {
-                mapper.guardar(objT);
+                mapper.guardar(objT, origen, destino);
             }
             return resultado;
         }
@@ -27,10 +27,10 @@ namespace Servicios
         {
             return mapper.obtenerPorId(xId);
         }
-        public void guardar(Tramo objT)
+        /*public void guardar(Tramo objT)
         {
             mapper.guardar(objT);
-        }
+        }*/
 
         public Resultado modificarTramo(Tramo objT)
         {

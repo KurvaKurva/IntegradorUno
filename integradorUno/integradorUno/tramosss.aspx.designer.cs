@@ -31,6 +31,24 @@ namespace integradorUno {
         protected global::System.Web.UI.WebControls.ListBox lstTramos;
         
         /// <summary>
+        /// Control ddlCiudadDestino.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DropDownList ddlCiudadDestino;
+        
+        /// <summary>
+        /// Control ddlCiudadOrigen.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DropDownList ddlCiudadOrigen;
+        
+        /// <summary>
         /// Control Label1.
         /// </summary>
         /// <remarks>

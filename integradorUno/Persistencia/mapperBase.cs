@@ -83,7 +83,7 @@ namespace Persistencia
         }
 
         private static string _servidor = "DESKTOP-6BB7657";
-        private static string _baseDatos = "integradorUno";
+        private static string _baseDatos = "integradorUnoPrueba";
         private static string dataConexion = "Data Source=" + _servidor + ";Initial Catalog=" + _baseDatos + ";" + "Integrated Security=SSPI;";
         public static SqlConnection ObtenerConexion()
         {

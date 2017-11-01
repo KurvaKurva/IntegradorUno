@@ -24,7 +24,7 @@ namespace integradorUno
         {
             lstOmnibus.DataSource = new gestoraOminubs().obtenerTodos();            
             lstOmnibus.DataTextField = "matricula";
-            lstOmnibus.DataValueField = "matricula";
+            lstOmnibus.DataValueField = "id";
             lstOmnibus.DataBind();
         }
       
@@ -71,8 +71,18 @@ namespace integradorUno
         {
             if(Page.IsValid)
             {
-                var obt = new gestoraOminubs().obtenerPorMatricula(Convert.ToString(lstOmnibus.SelectedValue));
+                /*  var obt = new gestoraOminubs().obtenerPorMatricula(Convert.ToString(lstOmnibus.SelectedValue));
+                  {
+                      //obt.id = Convert.ToInt32(lstOmnibus.SelectedValue)
+                      obt.capacidad = Convert.ToInt32(txtModCapacidad.Text);
+                      obt.ciudadActual = new Ciudad() { id = Convert.ToInt32(ddlCiudad.SelectedValue) };
+                      //obt.matricula = Convert.ToString(txtModMatricula.Text);
+                      obt.isLleno = false;
+                  };*/
+
+                var obt = new gestoraOminubs().obtenerPorId(Convert.ToInt32(lstOmnibus.SelectedValue));
                 {
+                    //obt.id = Convert.ToInt32(lstOmnibus.SelectedValue)
                     obt.capacidad = Convert.ToInt32(txtModCapacidad.Text);
                     obt.ciudadActual = new Ciudad() { id = Convert.ToInt32(ddlCiudad.SelectedValue) };
                     obt.matricula = Convert.ToString(txtModMatricula.Text);
@@ -102,9 +112,10 @@ namespace integradorUno
 
         protected void btnEliminar_Click(object sender, EventArgs e)
         {
-            if(Page.IsValid)
+            if (Page.IsValid)
             {
-                var obt = new gestoraOminubs().obtenerPorMatricula(Convert.ToString(lstOmnibus.SelectedValue));
+                //var obt = new gestoraOminubs().obtenerPorMatricula(Convert.ToString(lstOmnibus.SelectedValue));
+                var obt = new gestoraOminubs().obtenerPorId(Convert.ToInt32(lstOmnibus.SelectedValue));
                 var res = new gestoraOminubs().eliminar(obt);
                 if(res.estaCorrecto)
                 {

@@ -11,6 +11,12 @@
     
     <form id="form1" runat="server">
         <asp:ListBox ID="lstTramos" runat="server" OnSelectedIndexChanged="lstTramos_SelectedIndexChanged"></asp:ListBox>
+        <br />
+        Ciudad destino<asp:DropDownList ID="ddlCiudadDestino" runat="server">
+        </asp:DropDownList>
+        <br />
+        Ciudad origen<asp:DropDownList ID="ddlCiudadOrigen" runat="server">
+        </asp:DropDownList>
         <div>
 
             GUARDAR TRAMO<br />

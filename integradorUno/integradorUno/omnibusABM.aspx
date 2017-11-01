@@ -3,8 +3,11 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
 
+    Ciudad destino
+
     <asp:DropDownList ID="ddlCiudad" runat="server">
     </asp:DropDownList>
+    <br />
     <br />
     <asp:Label ID="Label1" runat="server" Text="Capacidad"></asp:Label>
     <asp:TextBox ID="txtCapacidad" runat="server"></asp:TextBox>

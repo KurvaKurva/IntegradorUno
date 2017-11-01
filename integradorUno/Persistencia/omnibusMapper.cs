@@ -14,9 +14,13 @@ namespace Persistencia
         {
             var objO = new Omnibus();
             var objC = new Ciudad();
+            
+
             objO.capacidad = Convert.ToInt32(reader["capacidad"]);
             objO.matricula = Convert.ToString(reader["matricula"]);
             objO.isLleno = Convert.ToBoolean(reader["isLleno"]);
+            objO.id = Convert.ToInt32(reader["id"]);
+
             var ciudad = new ciudadMapper().obtenerPorId(objC.id);
             return objO;
         }
@@ -47,6 +51,24 @@ namespace Persistencia
             var reader = select("SELECT * FROM omnibus WHERE matricula = @matricula", CommandType.Text, param, con, null);
             Omnibus o = null;
             if (reader.Read())
+            {
+                o = cargarOmnibus(reader);
+            }
+            CerrarConexion(con);
+            return o;
+        }
+
+        public Omnibus obtenerPorId(int xId)
+        {
+            var param = new List<SqlParameter>();
+            var id = new SqlParameter();
+            id.ParameterName = "@id";
+            id.Value = xId;
+            param.Add(id);
+            var con = AbrirConexion();
+            var reader = select("SELECT * FROM omnibus WHERE id = @id", CommandType.Text, param, con, null);
+            Omnibus o = null;
+            if(reader.Read())
             {
                 o = cargarOmnibus(reader);
             }
@@ -111,8 +133,12 @@ namespace Persistencia
             isLleno.ParameterName = "@isLleno";
             isLleno.Value = objO.isLleno;
             param.Add(isLleno);
+            var id = new SqlParameter();
+            id.ParameterName = "@id";
+            id.Value = objO.id;
+            param.Add(id);
             var con = AbrirConexion();
-            var filasAfectadas = EjecutaNonQuery("UPDATE omnibus SET matricula = @matricula, capacidad = @capacidad, idCiudad = @idCiudad, isLleno = @isLleno", CommandType.Text, param, con, null);
+            var filasAfectadas = EjecutaNonQuery("UPDATE omnibus SET matricula = @matricula, capacidad = @capacidad, idCiudad = @idCiudad, isLleno = @isLleno WHERE id = @id", CommandType.Text, param, con, null);
             CerrarConexion(con);
             return filasAfectadas;
         }

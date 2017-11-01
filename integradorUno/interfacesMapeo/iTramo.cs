@@ -11,7 +11,7 @@ namespace interfacesMapeo
     {
         List<Tramo> obtenerTodos();
         Tramo obtenerPorId(int xId);
-        void guardar(Tramo objT);
+        void guardar(Tramo objT, Ciudad origen, Ciudad destino);
         int eliminar(Tramo objT);
         int modificar(Tramo objT);
     }
