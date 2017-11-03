@@ -34,7 +34,7 @@ namespace integradorUno
             ddlCiudad.DataSource = objC.obtenerTodas();
             ddlCiudad.DataTextField = "nombre";
             ddlCiudad.DataValueField = "id";
-            ddlCiudad.DataBind();
+            ddlCiudad.DataBind();            
         }
 
         protected void btnAceptar_Click(object sender, EventArgs e)

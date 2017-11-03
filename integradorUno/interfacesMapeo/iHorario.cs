@@ -11,5 +11,9 @@ namespace interfacesMapeo
     {
         List<Horario> obtenerTodos();
         Horario obtenerPorId(int xId);
+
+        void guardar(Horario objH, Omnibus objO, Tramo objT);
+        int modificar(Horario objH);
+        int eliminar(Horario objH);
     }
 }

@@ -65,7 +65,7 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="horarios.aspx" />
+    <Content Include="frmHorarios.aspx" />
     <Content Include="omnibusABM.aspx" />
     <Content Include="packages.config" />
     <Content Include="principal.Master" />
@@ -82,15 +82,15 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Global.asax.cs">
-      <DependentUpon>Global.asax</DependentUpon>
-    </Compile>
-    <Compile Include="horarios.aspx.cs">
-      <DependentUpon>horarios.aspx</DependentUpon>
+    <Compile Include="frmHorarios.aspx.cs">
+      <DependentUpon>frmHorarios.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="horarios.aspx.designer.cs">
-      <DependentUpon>horarios.aspx</DependentUpon>
+    <Compile Include="frmHorarios.aspx.designer.cs">
+      <DependentUpon>frmHorarios.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="omnibusABM.aspx.cs">
       <DependentUpon>omnibusABM.aspx</DependentUpon>

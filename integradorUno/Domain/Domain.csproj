@@ -41,6 +41,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Ciudad.cs" />
+    <Compile Include="Dia.cs" />
     <Compile Include="Empresa.cs" />
     <Compile Include="Horario.cs" />
     <Compile Include="Omnibus.cs" />
