@@ -11,9 +11,11 @@
     OMNIBUS<asp:DropDownList ID="ddlOmnibus" runat="server">
     </asp:DropDownList>
     <br />
+    <br />
     DIAS<asp:TextBox ID="txtDia" runat="server"></asp:TextBox>
     <br />
     PARTIDA<asp:TextBox ID="txtPartida" runat="server"></asp:TextBox>
+    
     <br />
     LLEGADA<asp:TextBox ID="txtLlegada" runat="server"></asp:TextBox>
     <br />

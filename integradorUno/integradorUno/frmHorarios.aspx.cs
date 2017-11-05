@@ -24,7 +24,7 @@ namespace integradorUno
         private void cargarHorarios()
         {
             lstHorarios.DataSource = new gestoraHorario().obtenerTodos();
-            lstHorarios.DataTextField = "horarioSalida";
+            lstHorarios.DataTextField = "datos";
             lstHorarios.DataValueField = "id";
             lstHorarios.DataBind();
         }
