@@ -66,6 +66,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="frmHorarios.aspx" />
+    <Content Include="frmPasaje.aspx" />
     <Content Include="omnibusABM.aspx" />
     <Content Include="packages.config" />
     <Content Include="principal.Master" />
@@ -88,6 +89,13 @@
     </Compile>
     <Compile Include="frmHorarios.aspx.designer.cs">
       <DependentUpon>frmHorarios.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="frmPasaje.aspx.cs">
+      <DependentUpon>frmPasaje.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="frmPasaje.aspx.designer.cs">
+      <DependentUpon>frmPasaje.aspx</DependentUpon>
     </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>

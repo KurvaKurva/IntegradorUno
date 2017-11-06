@@ -43,6 +43,7 @@
     <Compile Include="iCiudad.cs" />
     <Compile Include="iHorario.cs" />
     <Compile Include="iOmnibus.cs" />
+    <Compile Include="iPasaje.cs" />
     <Compile Include="iTramo.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
