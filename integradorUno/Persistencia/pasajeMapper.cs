@@ -42,7 +42,7 @@ namespace Persistencia
 
         #region ABM
 
-        public void guardar(Pasaje objP, Omnibus objO, Horario objH, Ciudad objC)
+        public void guardar(Pasaje objP, Omnibus objO, Horario objH, Ciudad objOrigen, Ciudad objDestino)
         {
             var param = new List<SqlParameter>();
             var costo = new SqlParameter();
@@ -59,11 +59,11 @@ namespace Persistencia
             param.Add(idOmnibus);
             var origen = new SqlParameter();
             origen.ParameterName = "@idCiudadOrigen";
-            origen.Value = objC.id;
+            origen.Value = objOrigen.id;
             param.Add(origen);
             var destino = new SqlParameter();
             destino.ParameterName = "@idCiudadDestino";
-            destino.Value = objC.id;
+            destino.Value = objDestino.id;
             param.Add(destino);
             var horario = new SqlParameter();
             horario.ParameterName = "@idHorario";
@@ -73,7 +73,7 @@ namespace Persistencia
             var trn = con.BeginTransaction();
             try
             {
-                var filasAfectadas = EjecutaNonQuery("INSERT INTO pasaje costo, fecha, idOmnibus, idHorario, ciudadOrigen, ciudadDestino VALUES @costo, @fecha, @idOmnibus, @idHorario, @idCiudadOrigen, @idCiudadDestino", CommandType.Text, param, con, trn);
+                var filasAfectadas = EjecutaNonQuery("INSERT INTO pasaje (costo, fecha, idOmnibus, idHorario, idCiudadOrigen, idCiudadDestino) VALUES (@costo, @fecha, @idOmnibus, @idHorario, @idCiudadOrigen, @idCiudadDestino)", CommandType.Text, param, con, trn);
                 trn.Commit();
             }
             catch(Exception ex)

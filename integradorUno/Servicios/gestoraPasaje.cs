@@ -9,16 +9,17 @@ namespace Servicios
     public class gestoraPasaje
     {
         public static iPasaje mapper { get; set; }
-        public Resultado agegarPasaje(Pasaje objP, Omnibus objO, Horario objH, Ciudad objC)
+        
+        public Resultado agegarPasaje(Pasaje objP, Omnibus objO, Horario objH, Ciudad origen, Ciudad destino)
         {
             var resultado = new Resultado();
-            if (objH.dia.Equals(String.Empty))
+            if (objP.costo == 0)
             {
                 resultado.errores.Add("El nombre no puede estar vacío");
             }
             else
             {
-                mapper.guardar(objP, objO, objH, objC);
+                mapper.guardar(objP, objO, objH, origen, destino);
             }
             return resultado;
         }

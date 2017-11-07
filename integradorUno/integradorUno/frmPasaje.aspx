@@ -20,6 +20,6 @@
     Costo<asp:TextBox ID="txtCosto" runat="server"></asp:TextBox>
     <br />
     Fecha<asp:Calendar ID="clndFecha" runat="server"></asp:Calendar>
-    <asp:Button ID="btnAceptar" runat="server" Text="Button" value="Aceptar" />
+    <asp:Button ID="btnAceptar" runat="server" Text="Button" value="Aceptar" OnClick="btnAceptar_Click" />
     <br />
 </asp:Content>
