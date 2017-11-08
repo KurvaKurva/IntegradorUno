@@ -40,6 +40,34 @@ namespace Persistencia
             return listaPasajes;
         }
 
+        public List<Pasaje> obtenerPasajesEntreFechas(int xIdTramo, DateTime xFechaInicio, DateTime xFechaFin)
+        {
+            List<Pasaje> pasajesEntreFechas = new List<Pasaje>();
+            var param = new List<SqlParameter>();
+            var fechaInicio = new SqlParameter();
+            fechaInicio.ParameterName = "@fechaInicio";
+            fechaInicio.Value = xFechaInicio;
+            param.Add(fechaInicio);
+            var fechaFin = new SqlParameter();
+            fechaFin.ParameterName = "@fechaFin";
+            fechaFin.Value = xFechaFin;
+            param.Add(fechaFin);
+            var idTramo = new SqlParameter();
+            idTramo.ParameterName = "@idTramo";
+            idTramo.Value = xIdTramo;
+            param.Add(idTramo);            
+            var con = AbrirConexion();
+            var reader = select("SELECT * FROM pasaje p JOIN horario h ON p.idHorario = h.id WHERE p.fecha >= @fechaInicio AND p.fecha <= @fechaFin AND h.idTramo = @idTramo", CommandType.Text, param, con, null);
+            while(reader.Read())
+            {
+                pasajesEntreFechas.Add(cargarPasaje(reader));
+            }
+            CerrarConexion(con);
+            return pasajesEntreFechas;
+
+
+        }
+
         #region ABM
 
         public void guardar(Pasaje objP, Omnibus objO, Horario objH, Ciudad objOrigen, Ciudad objDestino)

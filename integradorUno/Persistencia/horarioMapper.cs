@@ -5,7 +5,6 @@ using interfacesMapeo;
 using Dominio;
 using System.Data.SqlClient;
 using System.Data;
-using Dominio;
 
 namespace Persistencia
 {

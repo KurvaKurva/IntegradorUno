@@ -21,6 +21,7 @@
     <br />
     <asp:Button ID="btnGuardar" runat="server" OnClick="btnGuardar_Click" Text="Guardar" />
     <br />
+    
     <br />
     <br />
     MODIFICAR<br />

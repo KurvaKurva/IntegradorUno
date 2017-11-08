@@ -21,6 +21,7 @@ namespace integradorUno
                 cargarCiudadOrigen();
                 cargarHorarios();
                 cargarPasajes();
+                cargarTramos();
             }
         }
         private void cargarOmnibus()
@@ -51,6 +52,22 @@ namespace integradorUno
             ddlHorario.DataTextField = "datos";
             ddlHorario.DataValueField = "id";
             ddlHorario.DataBind();
+        }
+
+        private void cargarTramos()
+        {
+            lstTramos.DataSource = new gestoraTramo().obtenerTodos();
+            lstTramos.DataTextField = "cantKilometros";
+            lstTramos.DataValueField = "id";
+            lstTramos.DataBind();
+        }
+        private void cargarPasajesEntreRangos()
+        {
+            lstPasajesEntreRangos.DataSource = new gestoraPasaje().obtenerPasajesEntreFechas(Convert.ToInt32(lstTramos.SelectedValue), clndInicio.SelectedDate, clndFin.SelectedDate);
+            lstPasajesEntreRangos.DataTextField = "costo";
+            lstPasajesEntreRangos.DataValueField = "id";
+            lstPasajesEntreRangos.DataBind();
+
         }
 
         private void cargarPasajes()
@@ -92,6 +109,12 @@ namespace integradorUno
                     }
                 }
             }
+        }
+
+        protected void btnCargar_Click(object sender, EventArgs e)
+        {
+            lstPasajesEntreRangos.DataSource = new gestoraPasaje().obtenerPasajesEntreFechas(Convert.ToInt32(lstTramos.SelectedValue), clndInicio.SelectedDate, clndFin.SelectedDate);
+            cargarPasajesEntreRangos();
         }
     }
 }

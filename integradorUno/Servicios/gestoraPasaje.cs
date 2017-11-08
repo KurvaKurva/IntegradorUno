@@ -28,5 +28,10 @@ namespace Servicios
         {
             return mapper.obtenerTodos();
         }
+
+        public List<Pasaje> obtenerPasajesEntreFechas(int xIdTramo, DateTime xFechaInicio, DateTime xFechaFin)
+        {
+            return mapper.obtenerPasajesEntreFechas(xIdTramo, xFechaInicio, xFechaFin);
+        }
     }
 }

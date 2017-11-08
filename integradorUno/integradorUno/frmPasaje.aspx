@@ -22,4 +22,12 @@
     Fecha<asp:Calendar ID="clndFecha" runat="server"></asp:Calendar>
     <asp:Button ID="btnAceptar" runat="server" Text="Button" value="Aceptar" OnClick="btnAceptar_Click" />
     <br />
+    <asp:ListBox ID="lstPasajesEntreRangos" runat="server"></asp:ListBox>
+    <asp:Button ID="btnCargar" runat="server" OnClick="btnCargar_Click" Text="Cargar" />
+    <br />
+    <br />
+    <asp:ListBox ID="lstTramos" runat="server"></asp:ListBox>
+    <asp:Calendar ID="clndInicio" runat="server"></asp:Calendar>
+    <asp:Calendar ID="clndFin" runat="server"></asp:Calendar>
+    <br />
 </asp:Content>
