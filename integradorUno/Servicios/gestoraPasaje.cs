@@ -33,5 +33,16 @@ namespace Servicios
         {
             return mapper.obtenerPasajesEntreFechas(xIdTramo, xFechaInicio, xFechaFin);
         }
+
+        public int obtenerCostoTotalDePasajesSegunTramoYFechas(int xIdTramo, DateTime xFechaInicio, DateTime xFechaFin)
+        {
+            var lstPasajes = obtenerPasajesEntreFechas(xIdTramo, xFechaInicio, xFechaFin);
+            var total = 0;
+            foreach (var objP in lstPasajes)
+            {   
+                total = total + objP.costo;
+            }
+            return total;
+        }
     }
 }

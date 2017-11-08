@@ -115,6 +115,7 @@ namespace integradorUno
         {
             lstPasajesEntreRangos.DataSource = new gestoraPasaje().obtenerPasajesEntreFechas(Convert.ToInt32(lstTramos.SelectedValue), clndInicio.SelectedDate, clndFin.SelectedDate);
             cargarPasajesEntreRangos();
+            var asd = new gestoraPasaje().obtenerCostoTotalDePasajesSegunTramoYFechas(Convert.ToInt32(lstTramos.SelectedValue), clndInicio.SelectedDate, clndFin.SelectedDate);
         }
     }
 }
