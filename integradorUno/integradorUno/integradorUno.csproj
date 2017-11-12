@@ -65,6 +65,7 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="CSS\estilos.css" />
     <Content Include="frmHorarios.aspx" />
     <Content Include="frmPasaje.aspx" />
     <Content Include="omnibusABM.aspx" />

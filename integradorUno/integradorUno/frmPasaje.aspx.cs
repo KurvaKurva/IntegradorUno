@@ -7,6 +7,9 @@ using System.Web.UI.WebControls;
 using Dominio;
 using interfacesMapeo;
 using Servicios;
+using System.Configuration;
+using System.Data.SqlClient;
+using System.Data;
 
 namespace integradorUno
 {
@@ -73,7 +76,7 @@ namespace integradorUno
         private void cargarPasajes()
         {
             lstPasajes.DataSource = new gestoraPasaje().obtenerTodos();
-            lstPasajes.DataTextField = "costo";
+            lstPasajes.DataTextField = "datos";
             lstPasajes.DataValueField = "id";
             lstPasajes.DataBind();
         }
@@ -115,7 +118,9 @@ namespace integradorUno
         {
             lstPasajesEntreRangos.DataSource = new gestoraPasaje().obtenerPasajesEntreFechas(Convert.ToInt32(lstTramos.SelectedValue), clndInicio.SelectedDate, clndFin.SelectedDate);
             cargarPasajesEntreRangos();
-            var asd = new gestoraPasaje().obtenerCostoTotalDePasajesSegunTramoYFechas(Convert.ToInt32(lstTramos.SelectedValue), clndInicio.SelectedDate, clndFin.SelectedDate);
+            var asd = new gestoraPasaje().obtenerCostoTotalDePasajesSegunTramoYFechas(Convert.ToInt32(lstTramos.SelectedValue), clndInicio.SelectedDate, clndFin.SelectedDate);            
         }
+
+    
     }
 }

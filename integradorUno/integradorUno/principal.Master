@@ -5,14 +5,51 @@
 <html>
 <head runat="server">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="CSS/estilos.css" rel="stylesheet">
     <title></title>
     <asp:ContentPlaceHolder ID="head" runat="server">
     </asp:ContentPlaceHolder>
 </head>
 <body>
     <form id="form1" runat="server">
+    
+    
+      
+    
+    <nav class='navbar navbar-inverse' >
+        <div class='container-fluid' id='contenedorDeNav' style='background-color: #3B5998; height: 65px;'>
+            <div class='navbar-header'>
+                <button type="button" class='navbar-toggle' data-toggle='collapse' data-target='#divNav'>
+
+                    <span class='icon-bar'></span>
+                    <span class='icon-bar'></span>
+                    <span class='icon-bar'></span>
+
+
+                </button>
+            </div>
+
+            <div class='collapse navbar-collapse' id='divNav'>
+
+                <ul class='nav navbar-nav'> 
+                    <li><a  href="Principal.aspx">Inicio</a></li>
+                    <li><a href="tramosss.aspx"> Tramos</a></li>
+                    <li><a href="frmHorarios.aspx">Horarios</a></li>
+                    <li><a href="omn">Omnibus</a></li>
+                    <li><a href="frmPasaje.aspx">Pasajes</a></li>
+                    
+
+                </ul>
+            </div>
+        </div>
+    </nav>
         <div>
+              <div style="background-color:black">
+
+                </div>
             <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+              
             </asp:ContentPlaceHolder>
         </div>
     </form>

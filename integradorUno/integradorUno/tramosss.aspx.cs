@@ -39,7 +39,7 @@ namespace integradorUno
         private void cargarTramos()
         {
             lstTramos.DataSource = new gestoraTramo().obtenerTodos();
-            lstTramos.DataTextField = "cantKilometros";
+            lstTramos.DataTextField = "datos";
             lstTramos.DataValueField = "id";
             lstTramos.DataBind();
         }
@@ -107,5 +107,7 @@ namespace integradorUno
 
             }
         }
+
+      
     }
 }

@@ -13,10 +13,15 @@ namespace Servicios
         public Resultado agregarOmnibus(Omnibus objO, Ciudad objC)
         {
             var Resultado = new Resultado();
-            if(objO.matricula.Equals(0))
+            if(objO.matricula == "")
             {
                 Resultado.errores.Add("No puede usar esa matrícula");
             }
+            else if(objO.capacidad > 46)
+            {
+                Resultado.errores.Add("El número ingresado supera la capacidad del ómnibus");
+            }
+            
             else
             {
                 mapper.guardar(objO, objC);
@@ -24,6 +29,15 @@ namespace Servicios
             return Resultado;
         }
 
+        public bool verificarMatricula(int xId, string xMatricula)
+        {
+            var obt = obtenerPorId(xId);
+            if(obt.matricula == xMatricula)
+            {
+                return false;
+            }
+            return true;
+        }
         public Resultado modificarOmnibus(Omnibus objO)
         {
             var res = new Resultado();

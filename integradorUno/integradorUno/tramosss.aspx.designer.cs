@@ -67,6 +67,24 @@ namespace integradorUno {
         protected global::System.Web.UI.WebControls.TextBox txtCantKilometros;
         
         /// <summary>
+        /// Control vldCantKilometrosSoloNum.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RegularExpressionValidator vldCantKilometrosSoloNum;
+        
+        /// <summary>
+        /// Control vldCantKilometros.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator vldCantKilometros;
+        
+        /// <summary>
         /// Control Label2.
         /// </summary>
         /// <remarks>
@@ -83,6 +101,15 @@ namespace integradorUno {
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtPrecioBase;
+        
+        /// <summary>
+        /// Control vldCosto.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator vldCosto;
         
         /// <summary>
         /// Control btnGuardar.

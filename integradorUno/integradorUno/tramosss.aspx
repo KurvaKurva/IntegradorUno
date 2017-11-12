@@ -23,8 +23,13 @@
             <asp:Label ID="Label1" runat="server" Text="Cantidad de Kilometros"></asp:Label>
             <asp:TextBox ID="txtCantKilometros" runat="server"></asp:TextBox>
             <br />
+            <asp:RegularExpressionValidator ID="vldCantKilometrosSoloNum" runat="server" ErrorMessage="Solo puede ingresar números." ControlToValidate="txtCantKilometros" ValidationExpression="^[0-9]*" ValidationGroup="Alta"></asp:RegularExpressionValidator>
+            <asp:RequiredFieldValidator ID="vldCantKilometros" runat="server" ControlToValidate="txtCantKilometros" ErrorMessage="Debe ingresar un valor." ValidationGroup="Alta"></asp:RequiredFieldValidator>
+            <br />
             <asp:Label ID="Label2" runat="server" Text="Precio Base"></asp:Label>
             <asp:TextBox ID="txtPrecioBase" runat="server"></asp:TextBox>
+            <br />
+            <asp:RequiredFieldValidator ID="vldCosto" runat="server" ControlToValidate="txtPrecioBase" ErrorMessage="Debe ingresar un valor." ValidationGroup="Alta"></asp:RequiredFieldValidator>
             <br />
             <asp:Button ID="btnGuardar" runat="server" OnClick="btnGuardar_Click" Text="Guardar" />
             <br />

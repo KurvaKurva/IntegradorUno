@@ -12,9 +12,17 @@ namespace Servicios
         public Resultado agregarTramo(Tramo objT, Ciudad origen, Ciudad destino)
         {
             var resultado = new Resultado();
-            if (objT.cantKilometros.Equals(0))
+            if (objT.cantKilometros == 0 || objT.cantKilometros < 0)
             {
                 resultado.errores.Add("Los kilómetros no pueden ser 0");
+            }
+            else if(objT.precioBase == 0 || objT.precioBase < 0)
+            {
+                resultado.errores.Add("El precio debe ser mayor a 0.");
+            }
+            else if (!verificarOrigenYDestinoDiferentes(objT))
+            {
+                resultado.errores.Add("El origen y destino no debe coincidir");
             }
             else
             {
@@ -23,6 +31,14 @@ namespace Servicios
             return resultado;
         }
 
+        public bool verificarOrigenYDestinoDiferentes(Tramo objT)
+        {
+            if(objT.origen.id == objT.destino.id)
+            {
+                return false;
+            }
+            return true;
+        }
         public Tramo obtenerPorId(int xId)
         {
             return mapper.obtenerPorId(xId);
@@ -31,6 +47,7 @@ namespace Servicios
         {
             mapper.guardar(objT);
         }*/
+
 
         public Resultado modificarTramo(Tramo objT)
         {

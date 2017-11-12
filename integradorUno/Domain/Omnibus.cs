@@ -12,5 +12,7 @@ namespace Dominio
         public Ciudad ciudadActual { get; set; }
         public bool isLleno { get; set; }
 
+       
+
     }
 }

@@ -49,6 +49,15 @@ namespace integradorUno {
         protected global::System.Web.UI.WebControls.DropDownList ddlCiudadDestino;
         
         /// <summary>
+        /// Control costoValidator.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator costoValidator;
+        
+        /// <summary>
         /// Control ddlHorario.
         /// </summary>
         /// <remarks>
@@ -128,5 +137,14 @@ namespace integradorUno {
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Calendar clndFin;
+        
+        /// <summary>
+        /// Control gridPasajes.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.GridView gridPasajes;
     }
 }
