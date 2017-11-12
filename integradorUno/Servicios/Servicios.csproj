@@ -42,6 +42,7 @@
   <ItemGroup>
     <Compile Include="gestoraCiudad.cs" />
     <Compile Include="gestoraHorario.cs" />
+    <Compile Include="gestoraLinea..cs" />
     <Compile Include="gestoraOminubs.cs" />
     <Compile Include="gestoraPasaje.cs" />
     <Compile Include="gestoraTramo.cs" />

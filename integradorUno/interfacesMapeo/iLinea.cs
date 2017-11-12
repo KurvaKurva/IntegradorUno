@@ -10,6 +10,7 @@ namespace interfacesMapeo
     public interface iLinea
     {
         List<Linea> obtenerTodos();
-        void guardar(Tramo objT, Pasaje objP);
+        void guardar(Tramo objT);
+        List<Linea> obtenerTramosPorPasaje(int xId);
     }
 }

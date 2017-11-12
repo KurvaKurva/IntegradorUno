@@ -43,10 +43,20 @@ namespace Servicios
         {
             return mapper.obtenerPorId(xId);
         }
-        /*public void guardar(Tramo objT)
+
+        public Resultado eliminar(Tramo objT)
         {
-            mapper.guardar(objT);
-        }*/
+            var res = new Resultado();
+            if (objT.id < 0)
+            {
+                res.errores.Add("No existe ese id");
+            }
+            else
+            {
+                mapper.eliminar(objT);
+            }
+            return res;
+        }
 
 
         public Resultado modificarTramo(Tramo objT)
@@ -67,10 +77,7 @@ namespace Servicios
             return mapper.modificar(objT);
         }
 
-        public int eliminar(Tramo objT)
-        {
-            return mapper.eliminar(objT);
-        }
+      
         public List<Tramo> obtenerTodos()
         {
             return mapper.obtenerTodos();

@@ -10,6 +10,10 @@ namespace Dominio
     {
         public int id { get; set; }
         public Tramo objT { get; set; }
-        public Pasaje objP { get; set; }
+
+        public string datos
+        {
+            get { return Convert.ToString(objT.cantKilometros); }
+        }
     }
 }

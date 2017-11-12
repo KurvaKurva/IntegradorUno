@@ -7,6 +7,7 @@ namespace Dominio
     public class Pasaje
     {        
         public int id { get; set; }
+        public Linea objL { get; set; }
         public Ciudad origen { get; set; }
         public Ciudad destino { get; set; }    
         public Horario objH { get; set; }

@@ -25,6 +25,7 @@ namespace integradorUno
                 cargarHorarios();
                 cargarPasajes();
                 cargarTramos();
+                cargarTramosAAgregar();                
             }
         }
         private void cargarOmnibus()
@@ -70,7 +71,14 @@ namespace integradorUno
             lstPasajesEntreRangos.DataTextField = "costo";
             lstPasajesEntreRangos.DataValueField = "id";
             lstPasajesEntreRangos.DataBind();
+        }
 
+        private void cargarTramosAAgregar()
+        {
+            ddlTramosAAgregar.DataSource = new gestoraTramo().obtenerTodos();
+            ddlTramosAAgregar.DataTextField = "datos";
+            ddlTramosAAgregar.DataValueField = "id";
+            ddlTramosAAgregar.DataBind();
         }
 
         private void cargarPasajes()
@@ -80,21 +88,43 @@ namespace integradorUno
             lstPasajes.DataValueField = "id";
             lstPasajes.DataBind();
         }
-        protected void btnAceptar_Click(object sender, EventArgs e)
+        private void cargarTramosDelPasaje()
+        {
+            lstTramosDelPasaje.DataSource = new gestoraLinea().obtenerTodos();
+            lstTramosDelPasaje.DataTextField = "datos";
+            lstTramosDelPasaje.DataValueField = "id";
+            lstTramosDelPasaje.DataBind();
+        }
+        protected void btnAgregarTramo_Click(object sender, EventArgs e)
         {
             if(Page.IsValid)
             {
-
-            
-            Pasaje objP = new Pasaje()
+                Linea objL = new Linea()
+                {
+                    objT = new Tramo() { id = Convert.ToInt32(ddlTramosAAgregar.SelectedValue) },
+                };
+                var res = new gestoraLinea().agregarLinea(objL.objT);
+                {
+                    if(res.estaCorrecto)
+                    {
+                        cargarTramosDelPasaje();
+                    }
+                }
+            }
+        }
+       /* protected void btnAceptar_Click(object sender, EventArgs e)
+        {
+            if(Page.IsValid)
             {
-                costo = Convert.ToInt32(txtCosto.Text),
-                fecha = Convert.ToDateTime(clndFecha.SelectedDate),
-                origen = new Ciudad() { id = Convert.ToInt32(ddlCiudadOrigen.SelectedValue) },
-                destino = new Ciudad() { id = Convert.ToInt32(ddlCiudadDestino.SelectedValue) },
-                objO = new Omnibus() { id = Convert.ToInt32(ddlOmnibus.SelectedValue) },
-                objH = new Horario() { id = Convert.ToInt32(ddlHorario.SelectedValue) },
-            };
+                Pasaje objP = new Pasaje()
+                {
+                    costo = Convert.ToInt32(txtCosto.Text),
+                    fecha = Convert.ToDateTime(clndFecha.SelectedDate),
+                    origen = new Ciudad() { id = Convert.ToInt32(ddlCiudadOrigen.SelectedValue) },
+                    destino = new Ciudad() { id = Convert.ToInt32(ddlCiudadDestino.SelectedValue) },
+                    objO = new Omnibus() { id = Convert.ToInt32(ddlOmnibus.SelectedValue) },
+                    objH = new Horario() { id = Convert.ToInt32(ddlHorario.SelectedValue) },
+                };
             var res = new gestoraPasaje().agegarPasaje(objP, objP.objO, objP.objH, objP.origen, objP.destino);
             {
                 if (res.estaCorrecto)
@@ -117,7 +147,7 @@ namespace integradorUno
                 }
             }
             }
-        }
+        }*/
 
         protected void btnCargar_Click(object sender, EventArgs e)
         {
@@ -137,5 +167,7 @@ namespace integradorUno
             pnlTotalFacturado.Visible = false;
             pnlPasajes.Visible = true;
         }
+
+      
     }
 }

@@ -70,16 +70,7 @@ namespace integradorUno
         protected void btnModificar_Click(object sender, EventArgs e)
         {
             if(Page.IsValid)
-            {
-                /*  var obt = new gestoraOminubs().obtenerPorMatricula(Convert.ToString(lstOmnibus.SelectedValue));
-                  {
-                      //obt.id = Convert.ToInt32(lstOmnibus.SelectedValue)
-                      obt.capacidad = Convert.ToInt32(txtModCapacidad.Text);
-                      obt.ciudadActual = new Ciudad() { id = Convert.ToInt32(ddlCiudad.SelectedValue) };
-                      //obt.matricula = Convert.ToString(txtModMatricula.Text);
-                      obt.isLleno = false;
-                  };*/
-
+            {             
                 var obt = new gestoraOminubs().obtenerPorId(Convert.ToInt32(lstOmnibus.SelectedValue));
                 {
                     //obt.id = Convert.ToInt32(lstOmnibus.SelectedValue)
@@ -114,7 +105,7 @@ namespace integradorUno
         {
             if (Page.IsValid)
             {
-                //var obt = new gestoraOminubs().obtenerPorMatricula(Convert.ToString(lstOmnibus.SelectedValue));
+               
                 var obt = new gestoraOminubs().obtenerPorId(Convert.ToInt32(lstOmnibus.SelectedValue));
                 var res = new gestoraOminubs().eliminar(obt);
                 if(res.estaCorrecto)
@@ -134,6 +125,18 @@ namespace integradorUno
                     }
                 }
             }
+        }
+        protected void btnModPanel_Click(object sender, EventArgs e)
+        {
+            pnlMod.Visible = true;
+            pnlEliminar.Visible = false;
+        }
+
+        protected void btnEliminarPnl_Click(object sender, EventArgs e)
+        {
+            pnlMod.Visible = false;
+            pnlEliminar.Visible = true;
+            
         }
     }
 }

@@ -34,9 +34,9 @@
 
                 <ul class='nav navbar-nav'> 
                     <li><a  href="Principal.aspx">Inicio</a></li>
-                    <li><a href="tramosss.aspx"> Tramos</a></li>
+                    <li><a href="frmTramos.aspx"> Tramos</a></li>
                     <li><a href="frmHorarios.aspx">Horarios</a></li>
-                    <li><a href="omn">Omnibus</a></li>
+                    <li><a href="omnibusABM.aspx">Omnibus</a></li>
                     <li><a href="frmPasaje.aspx">Pasajes</a></li>
                     
 

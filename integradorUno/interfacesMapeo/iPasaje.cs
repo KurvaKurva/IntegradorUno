@@ -9,7 +9,7 @@ namespace interfacesMapeo
 {
     public interface iPasaje
     {
-        void guardar(Pasaje objP, Omnibus objO, Horario objH, Ciudad origen, Ciudad destino);
+        void guardar(Pasaje objP, Omnibus objO, Horario objH, Ciudad objOrigen, Ciudad objDestino, Linea objL);
         List<Pasaje> obtenerPasajesEntreFechas(int xIdTramo, DateTime xFechaInicio, DateTime xFechaFin);
         List<Pasaje> obtenerTodos();
     }

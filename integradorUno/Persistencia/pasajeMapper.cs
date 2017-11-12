@@ -64,13 +64,11 @@ namespace Persistencia
             }
             CerrarConexion(con);
             return pasajesEntreFechas;
-
-
         }
 
         #region ABM
 
-        public void guardar(Pasaje objP, Omnibus objO, Horario objH, Ciudad objOrigen, Ciudad objDestino)
+        public void guardar(Pasaje objP, Omnibus objO, Horario objH, Ciudad objOrigen, Ciudad objDestino, Linea objL)
         {
             var param = new List<SqlParameter>();
             var costo = new SqlParameter();
@@ -81,6 +79,9 @@ namespace Persistencia
             fecha.ParameterName = "@fecha";
             fecha.Value = objP.fecha;
             param.Add(fecha);
+            var linea = new SqlParameter();
+            linea.Value = objL.id;
+            param.Add(linea);
             var idOmnibus = new SqlParameter();
             idOmnibus.ParameterName = "@idOmnibus";
             idOmnibus.Value = objO.id;
@@ -101,7 +102,8 @@ namespace Persistencia
             var trn = con.BeginTransaction();
             try
             {
-                var filasAfectadas = EjecutaNonQuery("INSERT INTO pasaje (costo, fecha, idOmnibus, idHorario, idCiudadOrigen, idCiudadDestino) VALUES (@costo, @fecha, @idOmnibus, @idHorario, @idCiudadOrigen, @idCiudadDestino)", CommandType.Text, param, con, trn);
+                    var filasAfectadas = EjecutaNonQuery("INSERT INTO pasaje (costo, fecha, idOmnibus, idHorario, idCiudadOrigen, idCiudadDestino, idLinea) VALUES (@costo, @fecha, @idOmnibus, @idHorario, @idCiudadOrigen, @idCiudadDestino, @idLinea)", CommandType.Text, param, con, trn);
+               
                 trn.Commit();
             }
             catch(Exception ex)

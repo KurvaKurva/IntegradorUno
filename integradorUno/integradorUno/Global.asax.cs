@@ -18,6 +18,7 @@ namespace integradorUno
             Servicios.gestoraCiudad.mapper = new ciudadMapper();
             Servicios.gestoraHorario.mapper = new horarioMapper();
             Servicios.gestoraPasaje.mapper = new pasajeMapper();
+            Servicios.gestoraLinea.mapper = new lineaMapper();
             ScriptManager.ScriptResourceMapping.AddDefinition("jquery",
                new ScriptResourceDefinition
                {

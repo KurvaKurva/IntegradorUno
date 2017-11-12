@@ -105,7 +105,7 @@ namespace Persistencia
             var param = new List<SqlParameter>();
             var id = new SqlParameter();
             id.ParameterName = "@id";
-            id.Value = objT;
+            id.Value = objT.id;
             param.Add(id);
             var con = AbrirConexion();
             var filasAfectadas = EjecutaNonQuery("DELETE FROM tramo WHERE id = @id", CommandType.Text, param, con, null);

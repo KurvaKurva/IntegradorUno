@@ -9,6 +9,17 @@
 &nbsp;<asp:ListBox ID="lstPasajes" runat="server" Width="800px"></asp:ListBox>
     <br />  
     <asp:Panel ID="pnlPasajes" runat="server" Visible="False">
+          Tramos del pasaje<br />
+          <asp:ListBox ID="lstTramosDelPasaje" runat="server" Width="802px"></asp:ListBox>
+          <br />
+          Tramos<asp:DropDownList ID="ddlTramosAAgregar" runat="server">
+          </asp:DropDownList>
+          <br />
+          <asp:Button ID="btnAgregarTramo" runat="server" OnClick="btnAgregarTramo_Click" Text="Agregar" />
+          <br />
+          <br />
+          <br />
+          <br />
           Servicio<br />
     <asp:DropDownList ID="ddlOmnibus" runat="server">
     </asp:DropDownList>
@@ -31,7 +42,7 @@
     <br />
     Fecha<asp:Calendar ID="clndFecha" runat="server"></asp:Calendar>
           <br />
-          <asp:Button ID="btnAceptar" runat="server" OnClick="btnAceptar_Click" Text="Aceptar" value="Aceptar" />
+          
     </asp:Panel>
     <br />    
     <asp:GridView ID="gridPasajes" runat="server">
