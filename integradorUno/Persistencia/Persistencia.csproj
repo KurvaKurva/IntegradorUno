@@ -43,6 +43,7 @@
   <ItemGroup>
     <Compile Include="ciudadMapper.cs" />
     <Compile Include="horarioMapper.cs" />
+    <Compile Include="lineaMapper.cs" />
     <Compile Include="mapperBase.cs" />
     <Compile Include="omnibusMapper.cs" />
     <Compile Include="pasajeMapper.cs" />

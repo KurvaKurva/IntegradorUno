@@ -20,8 +20,10 @@ namespace Persistencia
             objO.matricula = Convert.ToString(reader["matricula"]);
             objO.isLleno = Convert.ToBoolean(reader["isLleno"]);
             objO.id = Convert.ToInt32(reader["id"]);
+            objO.ciudadActual = new Ciudad() { id = Convert.ToInt32(reader["idCiudad"]) };
 
-            var ciudad = new ciudadMapper().obtenerPorId(objC.id);
+            
+            var ciudadActual = new ciudadMapper().obtenerPorId(objC.id);
             return objO;
         }
 

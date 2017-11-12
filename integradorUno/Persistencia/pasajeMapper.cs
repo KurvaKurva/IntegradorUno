@@ -112,10 +112,13 @@ namespace Persistencia
             {
                 CerrarConexion(con);
             }
-
-
-
         }
+
+        /*public int actualizarIdTramo(Tramo objT, Pasaje objP)
+        {
+            var param = new List<SqlParameter>();
+
+        }*/
         #endregion
     }
 }

@@ -82,6 +82,10 @@ namespace integradorUno
         }
         protected void btnAceptar_Click(object sender, EventArgs e)
         {
+            if(Page.IsValid)
+            {
+
+            
             Pasaje objP = new Pasaje()
             {
                 costo = Convert.ToInt32(txtCosto.Text),
@@ -112,6 +116,7 @@ namespace integradorUno
                     }
                 }
             }
+            }
         }
 
         protected void btnCargar_Click(object sender, EventArgs e)
@@ -121,6 +126,16 @@ namespace integradorUno
             var asd = new gestoraPasaje().obtenerCostoTotalDePasajesSegunTramoYFechas(Convert.ToInt32(lstTramos.SelectedValue), clndInicio.SelectedDate, clndFin.SelectedDate);            
         }
 
-    
+        protected void btnMostrar_Click(object sender, EventArgs e)
+        {
+            pnlTotalFacturado.Visible = true;
+            pnlPasajes.Visible = false;
+        }
+
+        protected void btnNuevoPasaje_Click(object sender, EventArgs e)
+        {
+            pnlTotalFacturado.Visible = false;
+            pnlPasajes.Visible = true;
+        }
     }
 }

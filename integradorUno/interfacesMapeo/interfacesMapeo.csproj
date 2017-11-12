@@ -42,6 +42,7 @@
   <ItemGroup>
     <Compile Include="iCiudad.cs" />
     <Compile Include="iHorario.cs" />
+    <Compile Include="iLinea.cs" />
     <Compile Include="iOmnibus.cs" />
     <Compile Include="iPasaje.cs" />
     <Compile Include="iTramo.cs" />

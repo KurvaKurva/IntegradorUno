@@ -12,7 +12,10 @@ namespace Dominio
         public Ciudad ciudadActual { get; set; }
         public bool isLleno { get; set; }
 
-       
+       public string datos
+        {
+            get { return "Matrícula: " + matricula + " Capacidad: " + capacidad; }
+        }
 
     }
 }

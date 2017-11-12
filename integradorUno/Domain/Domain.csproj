@@ -43,6 +43,7 @@
     <Compile Include="Ciudad.cs" />
     <Compile Include="Dia.cs" />
     <Compile Include="Horario.cs" />
+    <Compile Include="Linea.cs" />
     <Compile Include="Omnibus.cs" />
     <Compile Include="Pasaje.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

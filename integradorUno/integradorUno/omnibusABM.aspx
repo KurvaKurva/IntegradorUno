@@ -11,26 +11,32 @@
     <br />
     <asp:Label ID="Label1" runat="server" Text="Capacidad"></asp:Label>
     <asp:TextBox ID="txtCapacidad" runat="server"></asp:TextBox>
-    <asp:ListBox ID="lstOmnibus" runat="server"></asp:ListBox>
+    <asp:ListBox ID="lstOmnibus" runat="server" Width="803px"></asp:ListBox>
     <br />
     <asp:Label ID="Label2" runat="server" Text="Matricula"></asp:Label>
     <asp:TextBox ID="txtMatricula" runat="server"></asp:TextBox>
     <br />
     <asp:Button ID="btnAceptar" runat="server" OnClick="btnAceptar_Click" Text="Aceptar" />
     <br />
-    MODIFICAR<br />
-    <asp:Label ID="lblCapacidad" runat="server" Text="Capacidad"></asp:Label>
-    <asp:TextBox ID="txtModCapacidad" runat="server"></asp:TextBox>
     <br />
-    <asp:Label ID="lblMatricula" runat="server" Text="Matricula"></asp:Label>
-    <asp:TextBox ID="txtModMatricula" runat="server"></asp:TextBox>
     <br />
-    <asp:Button ID="btnModificar" runat="server" Text="Modificar" OnClick="btnModificar_Click" />
+    <br />
     <br />
     <br />
     ELIMINAR<br />
     <asp:Button ID="btnEliminar" runat="server" Text="Eliminar" OnClick="btnEliminar_Click" />
     <br />
     <br />
+
+    <asp:Panel ID="pnlMod" runat="server">
+        MODIFICAR<br />
+        <asp:Label ID="lblCapacidad" runat="server" Text="Capacidad"></asp:Label>
+        <asp:TextBox ID="txtModCapacidad" runat="server"></asp:TextBox>
+        <br />
+        <asp:Label ID="lblMatricula" runat="server" Text="Matricula"></asp:Label>
+        <asp:TextBox ID="txtModMatricula" runat="server"></asp:TextBox>
+        <br />
+        <asp:Button ID="btnModificar" runat="server" OnClick="btnModificar_Click" Text="Modificar" />
+    </asp:Panel>
 
 </asp:Content>

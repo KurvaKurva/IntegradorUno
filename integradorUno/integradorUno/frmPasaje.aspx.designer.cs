@@ -13,6 +13,24 @@ namespace integradorUno {
     public partial class frmPasaje {
         
         /// <summary>
+        /// Control btnMostrar.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnMostrar;
+        
+        /// <summary>
+        /// Control btnNuevoPasaje.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnNuevoPasaje;
+        
+        /// <summary>
         /// Control lstPasajes.
         /// </summary>
         /// <remarks>
@@ -20,6 +38,15 @@ namespace integradorUno {
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.ListBox lstPasajes;
+        
+        /// <summary>
+        /// Control pnlPasajes.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Panel pnlPasajes;
         
         /// <summary>
         /// Control ddlOmnibus.
@@ -94,6 +121,24 @@ namespace integradorUno {
         protected global::System.Web.UI.WebControls.Button btnAceptar;
         
         /// <summary>
+        /// Control gridPasajes.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.GridView gridPasajes;
+        
+        /// <summary>
+        /// Control pnlTotalFacturado.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Panel pnlTotalFacturado;
+        
+        /// <summary>
         /// Control lstPasajesEntreRangos.
         /// </summary>
         /// <remarks>
@@ -101,15 +146,6 @@ namespace integradorUno {
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.ListBox lstPasajesEntreRangos;
-        
-        /// <summary>
-        /// Control btnCargar.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnCargar;
         
         /// <summary>
         /// Control lstTramos.
@@ -139,12 +175,12 @@ namespace integradorUno {
         protected global::System.Web.UI.WebControls.Calendar clndFin;
         
         /// <summary>
-        /// Control gridPasajes.
+        /// Control btnCargar.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.GridView gridPasajes;
+        protected global::System.Web.UI.WebControls.Button btnCargar;
     }
 }

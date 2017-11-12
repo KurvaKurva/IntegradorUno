@@ -23,7 +23,7 @@ namespace integradorUno
        private void cargarOmnibus()
         {
             lstOmnibus.DataSource = new gestoraOminubs().obtenerTodos();            
-            lstOmnibus.DataTextField = "matricula";
+            lstOmnibus.DataTextField = "datos";
             lstOmnibus.DataValueField = "id";
             lstOmnibus.DataBind();
         }
