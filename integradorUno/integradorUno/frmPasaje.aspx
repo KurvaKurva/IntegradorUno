@@ -17,9 +17,6 @@
           <br />
           <asp:Button ID="btnAgregarTramo" runat="server" OnClick="btnAgregarTramo_Click" Text="Agregar" />
           <br />
-          <br />
-          <br />
-          <br />
           Servicio<br />
     <asp:DropDownList ID="ddlOmnibus" runat="server">
     </asp:DropDownList>
@@ -41,6 +38,10 @@
     <asp:TextBox ID="txtCosto" runat="server"></asp:TextBox>
     <br />
     Fecha<asp:Calendar ID="clndFecha" runat="server"></asp:Calendar>
+          <asp:Label ID="lblIdLinea" runat="server" Text="Label"></asp:Label>
+          <br />
+          <asp:Button ID="btnAceptar" runat="server" OnClick="btnAceptar_Click" Text="Aceptar" />
+          <asp:Button ID="btnGuardar" runat="server" OnClick="btnGuardar_Click" Text="Guardar" />
           <br />
           
     </asp:Panel>

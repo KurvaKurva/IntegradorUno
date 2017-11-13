@@ -10,7 +10,7 @@ namespace Servicios
     {
         public static iPasaje mapper { get; set; }
 
-        public Resultado agegarPasaje(Pasaje objP, Omnibus objO, Horario objH, Ciudad origen, Ciudad destino, Linea objL)
+        public Resultado agegarPasaje(Pasaje objP, Omnibus objO, Horario objH, Ciudad origen, Ciudad destino)
         {
             var resultado = new Resultado();
             if (objP.costo < 0)
@@ -31,7 +31,7 @@ namespace Servicios
             }
             else
             {
-                mapper.guardar(objP, objO, objH, origen, destino, objL);
+                mapper.guardar(objP, objO, objH, origen, destino);
             }
             return resultado;
         }

@@ -112,7 +112,7 @@ namespace integradorUno
                 }
             }
         }
-       /* protected void btnAceptar_Click(object sender, EventArgs e)
+       protected void btnAceptar_Click(object sender, EventArgs e)
         {
             if(Page.IsValid)
             {
@@ -123,7 +123,7 @@ namespace integradorUno
                     origen = new Ciudad() { id = Convert.ToInt32(ddlCiudadOrigen.SelectedValue) },
                     destino = new Ciudad() { id = Convert.ToInt32(ddlCiudadDestino.SelectedValue) },
                     objO = new Omnibus() { id = Convert.ToInt32(ddlOmnibus.SelectedValue) },
-                    objH = new Horario() { id = Convert.ToInt32(ddlHorario.SelectedValue) },
+                    objH = new Horario() { id = Convert.ToInt32(ddlHorario.SelectedValue) },                    
                 };
             var res = new gestoraPasaje().agegarPasaje(objP, objP.objO, objP.objH, objP.origen, objP.destino);
             {
@@ -147,7 +147,7 @@ namespace integradorUno
                 }
             }
             }
-        }*/
+        }
 
         protected void btnCargar_Click(object sender, EventArgs e)
         {
@@ -168,6 +168,41 @@ namespace integradorUno
             pnlPasajes.Visible = true;
         }
 
-      
+        protected void btnGuardar_Click(object sender, EventArgs e)
+        {
+            if (Page.IsValid)
+            {
+                Pasaje objP = new Pasaje()
+                {
+                    costo = Convert.ToInt32(txtCosto.Text),
+                    fecha = Convert.ToDateTime(clndFecha.SelectedDate),
+                    origen = new Ciudad() { id = Convert.ToInt32(ddlCiudadOrigen.SelectedValue) },
+                    destino = new Ciudad() { id = Convert.ToInt32(ddlCiudadDestino.SelectedValue) },
+                    objO = new Omnibus() { id = Convert.ToInt32(ddlOmnibus.SelectedValue) },
+                    objH = new Horario() { id = Convert.ToInt32(ddlHorario.SelectedValue) },
+                };
+                var res = new gestoraPasaje().agegarPasaje(objP, objP.objO, objP.objH, objP.origen, objP.destino);
+                {
+                    if (res.estaCorrecto)
+                    {
+                        cargarOmnibus();
+                        cargarPasajes();
+
+                    }
+                    else
+                    {
+                        foreach (var err in res.errores)
+                        {
+                            Page.Validators.Add(new CustomValidator()
+                            {
+                                ValidationGroup = "Alta",
+                                IsValid = false,
+                                ErrorMessage = err,
+                            });
+                        }
+                    }
+                }
+            }
+        }
     }
 }
