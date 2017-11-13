@@ -17,11 +17,17 @@ namespace Servicios
             {
                 resultado.errores.Add("El costo debe ser mayor a 0.");
             }
+            if(objP.fecha.Date.Equals(DateTime.Today))
+            {
+                var subt = (objP.costo * 0.10);
+                var total = subt + objP.costo;
+                mapper.guardar(objP, objO, objH, origen, destino);
+            }            
             else if (objO.isLleno == true)
             {
                 resultado.errores.Add("El servicio está lleno.");
             }
-            else if (!verificarServicioSeEncuentraEnCiudadOrigen(objO, origen))
+            else if (verificarServicioSeEncuentraEnCiudadOrigen(objO, origen))
             {
                 resultado.errores.Add("La ciudad de origen debe ser la ciudad actual del servicio.");
             }
@@ -29,10 +35,7 @@ namespace Servicios
             {
                 resultado.errores.Add("La ciudad de origen y la de destino no pueden ser iguales");
             }
-            else
-            {
-                mapper.guardar(objP, objO, objH, origen, destino);
-            }
+          
             return resultado;
         }
 
@@ -62,12 +65,7 @@ namespace Servicios
         public List<Pasaje> obtenerPasajesEntreFechas(int xIdTramo, DateTime xFechaInicio, DateTime xFechaFin)
         {
             return mapper.obtenerPasajesEntreFechas(xIdTramo, xFechaInicio, xFechaFin);
-        }
-       /* public int obtenerCostoTotalPasaje(int xIdPasaje, Tramo objT)
-        {
-            var lstPasajes = obtener
-        }
-        */
+        }    
         public int obtenerCostoTotalDePasajesSegunTramoYFechas(int xIdTramo, DateTime xFechaInicio, DateTime xFechaFin)
         {
             var lstPasajes = obtenerPasajesEntreFechas(xIdTramo, xFechaInicio, xFechaFin);

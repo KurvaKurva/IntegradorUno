@@ -141,6 +141,25 @@ namespace integradorUno
             }
         }
 
-      
+        protected void btnPanelAlta_Click(object sender, EventArgs e)
+        {
+            pnlAlta.Visible = true;
+            pnlBaja.Visible = false;
+            pnlModificar.Visible = false;
+        }
+
+        protected void btnPanelMod_Click(object sender, EventArgs e)
+        {
+            pnlAlta.Visible = false;
+            pnlBaja.Visible = false;
+            pnlModificar.Visible = true;
+        }
+
+        protected void btnPanelEliminar_Click(object sender, EventArgs e)
+        {
+            pnlAlta.Visible = false;
+            pnlBaja.Visible = true;
+            pnlModificar.Visible = false;
+        }
     }
 }

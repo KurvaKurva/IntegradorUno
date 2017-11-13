@@ -65,6 +65,8 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="CSS\bootstrap.css" />
+    <Content Include="CSS\bootstrap.min.css" />
     <Content Include="CSS\estilos.css" />
     <Content Include="frmHorarios.aspx" />
     <Content Include="frmPasaje.aspx" />

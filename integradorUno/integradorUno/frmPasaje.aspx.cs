@@ -25,7 +25,7 @@ namespace integradorUno
                 cargarHorarios();
                 cargarPasajes();
                 cargarTramos();
-                cargarTramosAAgregar();                
+                //cargarTramosAAgregar();                
             }
         }
         private void cargarOmnibus()
@@ -73,13 +73,13 @@ namespace integradorUno
             lstPasajesEntreRangos.DataBind();
         }
 
-        private void cargarTramosAAgregar()
+        /*private void cargarTramosAAgregar()
         {
             ddlTramosAAgregar.DataSource = new gestoraTramo().obtenerTodos();
             ddlTramosAAgregar.DataTextField = "datos";
             ddlTramosAAgregar.DataValueField = "id";
             ddlTramosAAgregar.DataBind();
-        }
+        }*/
 
         private void cargarPasajes()
         {
@@ -88,14 +88,14 @@ namespace integradorUno
             lstPasajes.DataValueField = "id";
             lstPasajes.DataBind();
         }
-        private void cargarTramosDelPasaje()
+       /* private void cargarTramosDelPasaje()
         {
             lstTramosDelPasaje.DataSource = new gestoraLinea().obtenerTodos();
             lstTramosDelPasaje.DataTextField = "datos";
             lstTramosDelPasaje.DataValueField = "id";
             lstTramosDelPasaje.DataBind();
-        }
-        protected void btnAgregarTramo_Click(object sender, EventArgs e)
+        }*/
+       /* protected void btnAgregarTramo_Click(object sender, EventArgs e)
         {
             if(Page.IsValid)
             {
@@ -111,7 +111,7 @@ namespace integradorUno
                     }
                 }
             }
-        }
+        }*/
        protected void btnAceptar_Click(object sender, EventArgs e)
         {
             if(Page.IsValid)
@@ -131,7 +131,6 @@ namespace integradorUno
                 {
                     cargarOmnibus();
                     cargarPasajes();
-
                 }
                 else
                 {
@@ -187,6 +186,7 @@ namespace integradorUno
                     {
                         cargarOmnibus();
                         cargarPasajes();
+                        lblExito.Text = "El pasaje ha sido guardado";
 
                     }
                     else

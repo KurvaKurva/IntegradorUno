@@ -4,5 +4,10 @@
     padding:0px;
 }
 body {
-    background-color:crimson;
+    background-color: rgba(0, 0, 169, 0.3);
+}
+
+main {
+    background-color: rgba(0, 0, 0, 0.1);
+    border-radius: 4px;
 }

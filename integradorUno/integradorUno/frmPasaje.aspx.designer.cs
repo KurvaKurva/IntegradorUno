@@ -49,33 +49,6 @@ namespace integradorUno {
         protected global::System.Web.UI.WebControls.Panel pnlPasajes;
         
         /// <summary>
-        /// Control lstTramosDelPasaje.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.ListBox lstTramosDelPasaje;
-        
-        /// <summary>
-        /// Control ddlTramosAAgregar.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList ddlTramosAAgregar;
-        
-        /// <summary>
-        /// Control btnAgregarTramo.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnAgregarTramo;
-        
-        /// <summary>
         /// Control ddlOmnibus.
         /// </summary>
         /// <remarks>
@@ -139,22 +112,13 @@ namespace integradorUno {
         protected global::System.Web.UI.WebControls.Calendar clndFecha;
         
         /// <summary>
-        /// Control lblIdLinea.
+        /// Control lblExito.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblIdLinea;
-        
-        /// <summary>
-        /// Control btnAceptar.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnAceptar;
+        protected global::System.Web.UI.WebControls.Label lblExito;
         
         /// <summary>
         /// Control btnGuardar.
